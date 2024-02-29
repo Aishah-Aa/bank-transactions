@@ -22,19 +22,19 @@ class Bank {     //OBJECT
 
      
     addCustomer(customer){
-        let branch =this.branchs.find((branch) => branch == branch);
+        let branch =this.branchs.find((branch) => branch === branch);
         if (branch) {
             branch.addCustomer(customer);
         }
-        // this.customer.push(customer)
+        // this.customer.push(customer)   first try 
     }
 
     // getCustomer(){
-    //     return this.customer
+    //     return this.customer   **
     // }
 
     addCustomerTransactions(branch,customerId,amount){
-       let branch = this.branchs.find((branch) => branch.name == branch.name );
+       let branch = this.branchs.find((branch) => branch.name === branch.name );
        if (branch){
         branch.addCustomerTransaction(customerId,amount);
        }
